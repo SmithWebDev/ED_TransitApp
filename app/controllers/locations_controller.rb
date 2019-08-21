@@ -10,6 +10,18 @@ class LocationsController < ApplicationController
   # GET /locations/1
   # GET /locations/1.json
   def show
+    @buses = HTTParty.get('http://developer.itsmarta.com/BRDRestService/RestBusRealTimeService/GetAllBus ')
+
+    @bus_count = 0
+
+    @nearby_bus = []
+
+    @buses.each do |bus|
+      if nearby(@location.longitude, @location.latitude, bus["LONGITUDE"].to_f, bus["LATITUDE"].to_f)
+        @bus_count += 1
+        @nearby_buses.push(bus)
+      end
+    end
   end
 
   # GET /locations/new
