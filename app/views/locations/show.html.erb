@@ -10,14 +10,11 @@
   <% else %>
     <% @nearby_buses.each do |bus| %>
       <p>
-        <strong>Route:</strong>
-        <%= bus["ROUTE"] %>
+        <strong>Route:</strong><%= bus["ROUTE"] %>
         <br>
-        <strong>Vehicle</strong>
-        <%= bus["VEHICLE"] %>
+        <strong>Vehicle</strong><%= bus["VEHICLE"] %>
         <br>
-        <strong>Next stop</strong>
-        <%= bus["TIMEPOINT"] %>
+        <strong>Next stop</strong><%= bus["TIMEPOINT"] %>
         <br>
       </p>
     <% end %>
