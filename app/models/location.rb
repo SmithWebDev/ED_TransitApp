@@ -1,8 +1,8 @@
 class Location < ApplicationRecord
-  geocoded_by :my_location
+  geocoded_by :address
   after_validation :geocode
 
-  def my_location
-    "#{address}, #{city}, GA"
-  end
+  # def my_location
+  #   "#{address}, #{city}, GA"
+  # end
 end

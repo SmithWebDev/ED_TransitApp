@@ -26,6 +26,11 @@ class LocationsController < ApplicationController
     end
   end
 
+  def test
+    @buses = HTTParty.get('http://developer.itsmarta.com/BRDRestService/RestBusRealTimeService/GetAllBus')
+
+  end
+
   # GET /locations/new
   def new
     @location = Location.new

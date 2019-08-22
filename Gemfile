@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'geocoder'
 gem 'httparty'
 gem 'jquery-rails'
+gem 'hirb', '~> 0.7.3'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
